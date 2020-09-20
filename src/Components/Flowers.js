@@ -84,13 +84,17 @@ export default class Flowers extends Component {
         }  
         render(){
             return(
+                <React.Fragment>
+                <div className =" font-weight-bold">
+                <h5>Flowers</h5>
+               </div>
+               {
                 
             this.state.reserve.map((item, index) => {
                 return( 
-                    
-              
-                <div className="container " key={index}>
-                 
+         
+                    <div className="container " key={index}>
+             
                     <div className = "row">
                       
                                     <div className="col-md-6">
@@ -98,12 +102,12 @@ export default class Flowers extends Component {
                                    <div className="card "  width= "03rem">
                               <img className="card-img-top" src={item.image} alt="Flower Bouquet" />
                                <div className="card-body ">
-                            <h5 className="card-title">{item.title}</h5>
-                             <ul>
+                            <h5 className="card-title font-weight-bold">{item.title}</h5>
+                             <ul className= "font-weight-bold">
                             <li >Rating: {item.rating}/5</li>
                             <li >Price: ${item.prices ? item.prices[0].value : ""}</li>
                            </ul>
-                              <button className="add-button .bg-dark Primary link" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
+                              <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
                           
                               </div>
                 </div>
@@ -113,29 +117,11 @@ export default class Flowers extends Component {
                  
             ) }
             )
+        }
+        </React.Fragment>
             )
       }
 }
 
 
 
-    //     // // <div className="container" key={index}> 
-    //     <div className="container"> 
-    //     <div className="row">
-    //      <div className="col s3 m2">
-    //        <div className="card">
-    //          <div className="card-image">
-    //            <img src={item.image} alt= "Flower Bouquet" className="responsive-img"/>
-    //          </div>
-    //          <div className="card-content">
-    //          <span className="card-title">{item.title}</span>
-    //            <ul>
-    //                <li>Rating: {item.rating}</li>
-    //                <li>Price: ${item.prices ? item.prices[0].value : ""} </li>
-    //            </ul>
-    //            <button className="add-button" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
-    //          </div>
-    //        </div>
-    //      </div>
-    //     </div>
-    //   </div>

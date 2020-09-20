@@ -83,7 +83,11 @@ postAPI = async (formData) =>{
     }  
     render(){
         return(
-            
+            <React.Fragment>
+            <div className =" font-weight-bold">
+            <h5> Giftcards</h5>
+           </div>
+           {
         this.state.reserve.map((item, index) => {
             return( 
                 
@@ -95,7 +99,7 @@ postAPI = async (formData) =>{
                                 <div className="col-md-6">
                                {/* <div className="card" > */}
                                <div className="card "  width= "03rem">
-                          <img className="card-img-top" src={item.image} alt="Flower Bouquet" />
+                          <img className="card-img-top" src={item.image} alt="Giftcards" />
                            <div className="card-body ">
                         <h5 className="card-title font-weight-bold">{item.title}</h5>
                          <ul className= "font-weight-bold">
@@ -112,6 +116,8 @@ postAPI = async (formData) =>{
              
         ) }
         )
+            }
+       </React.Fragment>
         )
   }
 }

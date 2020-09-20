@@ -7,6 +7,7 @@ import Feedback from './Feedback';
 import Myorder from './Myorder';
 import Giftcards from './Giftcards';
 import Chocolates from './Chocolates';
+import Home from './Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Navbar(){
@@ -21,11 +22,11 @@ export default function Navbar(){
 
   <div className="collapse navbar-collapse bg-dark" id="navbarSupportedContent">
     <ul className="navbar-nav m-auto ">
-      {/* <li className="nav-item ">
+      <li className="nav-item ">
         <Link to ="/">
         <a className="nav-link text-white text-uppercase" href="#">Home <span className="sr-only">(current)</span></a>
         </Link>
-      </li> */}
+      </li>
      
     
       <li className="nav-item text-white text-uppercase bg-dark">
@@ -67,7 +68,7 @@ export default function Navbar(){
 </nav>
 
 <Switch>
-  {/* <Route exact path= "/" component={Home} /> */}
+  <Route exact path= "/Home" component={Home} />
   <Route exact path= "/Flowers" component={Flowers} />
   <Route exact path= "/Mycart" component= {Mycart} />
   <Route exact path= "/Feedback" component = {Feedback} />
@@ -80,65 +81,3 @@ export default function Navbar(){
 </div>
     );
   }
-//   <div className="nav-wrapper blue lighten-1">
-//   <div className="card-panel black">
-//   <Router>
-//   <nav>
-//         <ul >
-//           <li>
-//             <Link to="/">
-//               <span className="white-text text-darken-2">THE FLORIST</span>{" "}
-//             </Link>{" "}
-//           </li>
-//           <li>
-//             <Link to="/Flowers">
-//               <span className="white-text text-darken-2">
-//                 {" "}
-//                 FLOWERS
-//               </span>
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/Chocolates">
-//               <span className="white-text text-darken-2">CHOCOLATES</span>
-//             </Link>
-//           </li>
-//           <li>
-//             <Link to="/Giftcards">
-//               <span className="white-text text-darken-2">GIFTCARDS</span>
-//             </Link>
-//           </li>
-//            <li>
-//            <Link to="/Myorder">
-//              <span className="white-text text-darken-2">ORDER</span>
-//            </Link>
-//          </li>
-//           <li>
-//           <Link to="/Feedback">
-//             <span className="white-text text-darken-2">FEEDBACK</span>
-//           </Link>
-//         </li>
-//           <li>
-//           <Link to="/Mycart">
-//             <span className="white-text text-darken-2">CART<MdAddShoppingCart color= 'white' size= '3rem' /></span>
-//           </Link>
-//           <div>
-
-// </div>
-//         </li>
-//         </ul>
-//       {/* </div> */}
-      
-//     {/* </div> */}
-//   </nav>
-//   <Switch>
-//     <Route exact path="/Flowers" component={Flowers} />
-//     <Route exact path="/Chocolates" component={Chocolates} />
-//     <Route exact path="/Giftcards" component={Giftcards} />
-//     <Route exact path="/Myorder" component={Myorder} />
-//     <Route exact path="/Feedback" component={Feedback} />
-//     <Route exact path="/Mycart" component={Mycart} />
-//   </Switch>
-// </Router>
-// </div>
-// </div>

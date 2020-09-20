@@ -83,31 +83,39 @@ postAPI = async (formData) =>{
     }  
     render(){
         return(
+            <React.Fragment>
+            <div className =" font-weight-bold">
+            <h5>Gourmet Chocolates</h5>
+           </div>
+           {
         this.state.reserve.map((item, index) => {
             return( 
-            <div className="container " key={index}>
+     
+                <div className="container " key={index}>
+             
                 <div className = "row">
                   
                                 <div className="col-md-6">
                                {/* <div className="card" > */}
                                <div className="card "  width= "03rem">
-                          <img className="card-img-top" src={item.image} alt="Flower Bouquet" />
+                          <img className="card-img-top" src={item.image} alt="Chocolates" />
                            <div className="card-body ">
-                        <h5 className="card-title">{item.title}</h5>
-                         <ul>
+                        <h5 className="card-title font-weight-bold">{item.title}</h5>
+                         <ul className= "font-weight-bold">
                         <li >Rating: {item.rating}/5</li>
                         <li >Price: ${item.prices ? item.prices[0].value : ""}</li>
                        </ul>
-                          <button className="add-button .bg-dark Primary link" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
+                          <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
                       
                           </div>
             </div>
              </div>
              </div>
              </div>
-             
         ) }
         )
+    }
+    </React.Fragment>
         )
   }
 }
