@@ -4,11 +4,13 @@ import { MdAddShoppingCart } from "react-icons/md";
 import Mycart from './Mycart';
 import Flowers from './Flowers';
 import Feedback from './Feedback';
-import Myorder from './Myorder';
 import Giftcards from './Giftcards';
 import Chocolates from './Chocolates';
+import GreetingCard from './GreetingCard';
 import Home from './Home';
 import 'bootstrap/dist/css/bootstrap.min.css';
+
+
 
 export default function Navbar(){
     return(
@@ -22,12 +24,12 @@ export default function Navbar(){
 
   <div className="collapse navbar-collapse bg-dark" id="navbarSupportedContent">
     <ul className="navbar-nav m-auto ">
-      <li className="nav-item ">
-        <Link to ="/">
-        <a className="nav-link text-white text-uppercase" href="#">Home <span className="sr-only">(current)</span></a>
+      <li className="nav-item text-white text-uppercase bg-dark">
+        <Link to ="/Home">
+        <a className="nav-link text-white text-uppercase" href="#">Home </a>
         </Link>
       </li>
-     
+      {/* <span className="sr-only">(current)</span> */}
     
       <li className="nav-item text-white text-uppercase bg-dark">
         <Link to = "/Flowers">
@@ -44,14 +46,15 @@ export default function Navbar(){
         <a className="nav-link  text-white text-uppercase " href="#">Chocolates</a>
         </Link>
       </li>
+
+       <li className="nav-item text-white text-uppercase bg-dark">
+         <Link to = "/GreetingCard">
+        <a className="nav-link text-white text-uppercase " href="#">Greeting Cards</a>
+        </Link>
+      </li>
       <li className="nav-item text-white text-uppercase bg-dark">
         <Link to = "/Feedback">
         <a className="nav-link  text-white text-uppercase " href="#">Feedback</a>
-        </Link>
-      </li>
-       <li className="nav-item text-white text-uppercase bg-dark">
-         <Link to = "/Myorder">
-        <a className="nav-link text-white text-uppercase " href="#">My order</a>
         </Link>
       </li>
     </ul>
@@ -72,7 +75,7 @@ export default function Navbar(){
   <Route exact path= "/Flowers" component={Flowers} />
   <Route exact path= "/Mycart" component= {Mycart} />
   <Route exact path= "/Feedback" component = {Feedback} />
-  <Route exact path= "/Myorder" component= {Myorder} />
+  <Route exact path= "/GreetingCard" component= {GreetingCard} />
   <Route exact path= "/Giftcards" component= {Giftcards} />
   <Route exact path= "/Chocolates" component= {Chocolates} />
   

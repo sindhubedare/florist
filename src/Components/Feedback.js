@@ -86,7 +86,7 @@ export default class Feedback extends Component{
                     <br/><br/>
                     
                     <div className="card-body">
-                    <button className="add-button text-dark">Submit</button>
+                    <button className="btn btn-dark text-light">Submit</button>
                                   
                                       </div>
                  

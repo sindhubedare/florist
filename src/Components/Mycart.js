@@ -3,6 +3,7 @@ import {Button, Table} from 'react-bootstrap';
 import axios from 'axios';
 import { BrowserRouter as Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Checkout from './Checkout';
 
 export default class Mycart extends Component {
     constructor (props) {
@@ -104,16 +105,18 @@ export default class Mycart extends Component {
                                       ${item.total}
                                  </td>
                                  <td className= "text-dark">
-                                      <Button variant="link" style={{fontSize: "10px"}} onClick={(e)=> {this.deleteAPI(item.id)}}>Remove</Button> 
+                                      <Button variant="dark" style={{fontSize: "12px"}} onClick={(e)=> {this.deleteAPI(item.id)}}>Remove</Button> 
                                  </td>
                              </tr>)})}
                      </tbody>
                 </Table>   
                  </div>
+                 <h3>Total amount due : $ {this.state.finaltotal}</h3>
                  <div className="buttons-table" style={{marginRight: "35px"}}>
-                  <h3>Total amount due : $ {this.state.finaltotal}</h3>
-                  <Link to='/Checkout' value={this.state.reserve}> <Button variant="info">Checkout</Button> </Link> 
-                  <Link to='/Home'> <Button variant="info" style={{marginRight: "35px"}}>Continue Shopping</Button> </Link> 
+                  
+                  <Link to='/Home'> <Button variant="dark" style={{marginRight: "35px"}}>Continue Shopping</Button> </Link>
+                  <Link to='/Checkout' value={this.state.reserve}> <Button variant="dark">Checkout</Button> </Link> 
+                   
                  </div>
                  
              </div> 

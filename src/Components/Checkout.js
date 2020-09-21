@@ -1,68 +1,108 @@
 import React, { Component } from 'react'
-import axios from 'axios';
-import {Table } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import '../styles/_MyProfile.scss'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Link } from "react-router-dom";
 import Mycart from './Mycart';
+import Confirmation from './Confirmation';
 
+
+//nameoncard, ccnumbr, expiremonthandyr and cvv and submit button
 export default class Checkout extends Component {
-
     constructor(props) {
         super(props);
-        this.state ={
-            // reviews: [],
-            // flowers:[],
-            // Review: "",
-            // Rating: "",
-            // deleted: [],
-            reserve:[],
-            // fullName: '',
-            // phone: '', 
-            // email: '',
-            // address:'',
-            finaltotal:[]
+        this.state = {
+            email: "",
+            firstName: "",
+            ccNum: "",
+            expiryDate: "",
+            cvv: "",
+            address: "",
+            reserve:[]
         }
-
+        
     }
 
-    async componentDidMount() {
- 
-        try{
-                const response = await axios.get("https://cors-anywhere.herokuapp.com/https://boiling-ocean-50857.herokuapp.com/sindhu_api/v1/orders");
-
-            
-                this.setState({reserve: response.data});
-                            let temp=[];
-                let finalPrice=[];
-                for(let i=0; i<response.data.length;i++){
-                {temp[i]= response.data[i].total;}
-                finalPrice.push(temp[i])
-                console.log(finalPrice)
-
-                }
-                console.log(
-                    finalPrice.reduce((a, b) => a + b, 0)
-                  )
-
-                  let totalPay = ( finalPrice.reduce((a, b) => a + b, 0)).toFixed(2);
-                   this.setState({finaltotal:totalPay})
-            }
+ handleChange = (event) =>{
+      
+        console.log("Onchange", event.target.value)
+        this.setState({
+          [event.target.name]:event.target.value
+        });
+    }
+    handleSubmit = (event)=>{
+        alert("Card information complete.");
+        event.preventDefault();
+        console.log(event)
     
-        catch(e){
-                console.log("Error", e)
-            }
+        let formData = {
+            email: this.state.email,
+            firstName: this.state.firstName,
+            ccNum: this.state.ccNum,
+            expiryDate: this.state.expiryDate,
+            cvv: this.state.cvv,
+            address: this.state.address
+    
         }
+        console.log(formData)
+    }
+    
+    // try {
+    //     console.log(response.data);
+    //  }
+      catch (err) {
+       console.error(err.message);
+     }
 
     render() {
-
-        let items = this.state.items
         return (
             <React.Fragment>
-            <div className = "final-form-container">
-                <h3>Total amount due : $ {this.state.finaltotal}</h3>
-     
-            </div>
-            </React.Fragment>
+            <div className= "feedback-form">
+               <div className="form-div-review">
+                 <div>
+                 <h4 id="review-heading" >Card Info</h4>
+                 </div>
+            
+
+                 <div>
+                   <form onSubmit={this.handleSubmit} >
+                   <label className="label-review text-dark">
+                    Email ID </label>
+                    <input className="input-review-email text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Email"/>
+                    <br/><br/>
+                    <label className="label-review text-dark">
+                    Name on the card </label>
+                    <input className="input-review-fname text-dark" type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} placeholder="Name"/>
+                    <br/><br/>
+                    <label className="label-review text-dark">
+                    Credit/Debit Card Number </label>
+                    <input className="input-review-ccNum text-dark" type="text" name="ccNum" value={this.state.ccNum} onChange={this.handleChange} placeholder="CC Number"/>
+                    <br/><br/>
+                    <label className="label-review text-dark">
+                    Expiry Date and Month </label>
+                    <input className="input-review-expiryDate text-dark" type="text" name="expiryDate" value={this.state.expiryDate} onChange={this.handleChange} placeholder="DD/MM"/>
+                    <br/><br/>
+                    <label className="label-review text-dark">
+                    CVV </label>
+                    <input className="input-review-cvv text-dark" type="text" name="cvv" value={this.state.cvv} onChange={this.handleChange} placeholder="CVV"/>            
+                    <br/><br/>
+                    <label className="label-review text-dark">
+                    Delivery Address </label>
+                    <input className="input-review-address text-dark" type="text" name="address" value={this.state.address} onChange={this.handleChange} placeholder="Delivery Address"/>            
+                    <br/><br/>
+                    
+                    <div className="card-body">
+                   <Link to = "/Confirmation">
+                    <button className="add-button text-dark">Submit</button>
+                    </Link> 
+                                      </div>
+                 
+                    
+                    </form>
+                   </div>
+                      
+                    </div>
+                    </div>
+    
+  </React.Fragment>
 )
         }
 }
