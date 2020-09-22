@@ -78,7 +78,7 @@ export default class Feedback extends Component{
                     <br/><br/>
                     <label className="label-review text-dark">
                     Email </label>
-                    <input className="input-review-email text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="email address"/>
+                    <input className="input-review-email text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Email address"/>
                     <br/><br/>
                     <label className="label-review text-dark">
                     Feedback </label>

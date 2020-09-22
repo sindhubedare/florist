@@ -4,40 +4,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 // import img1 from '../../public/assets/img/img1.jpg';
 
 export default function Home() {
-    return (
-  <div className='foo'  >
-      <br/>
-   <div >
-   <div >
-   <h2 style={{textAlign: 'center', color: 'yellow' }}>
-   Let the Drinks Come to You.</h2>
-   {/* <ResponsiveEmbed aspectRatio="16by9">
-          <embed src={gifbeer} style={{  height: 'auto' }}  />
-          </ResponsiveEmbed>    */}
-<Carousel>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="https://cdn.idsitnetwork.net/wp-content/uploads/sites/27/2019/01/flower-shop-fields-of-romance-148245.jpg"
-      alt="First slide"  height= "500px" width="200px"/>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="https://cdn.idsitnetwork.net/wp-content/uploads/sites/27/2019/01/flower-shop-fields-of-romance-148245.jpg"
-      alt="second slide"  height= "500px" width="200px" length="200px"/>
-  </Carousel.Item>
-  <Carousel.Item>
-    <img
-      className="d-block w-100"
-      src="https://cdn.idsitnetwork.net/wp-content/uploads/sites/27/2019/01/flower-shop-fields-of-romance-148245.jpg"
-      alt="Third slide" length="200px" height= "500px" width="200px" length="200px"/>
-  </Carousel.Item>
-</Carousel>
-          <h4 style={{textAlign:'center', color: 'yellow' }}>Beer and Wine Delivered to your home in under 60 mintes</h4>
-          </div>
-        </div>
-   </div>
+  return (
+    <div className= "home-img">
+        {/* <img src ="https://cnet2.cbsistatic.com/img/9tf6BfVtKOpwjMwKYAc2usl0WRg=/105x158:744x517/1200x675/2020/01/20/ada6b2c1-465f-409e-8956-df61acd3a067/bouqs-valentines-day-flowers.jpg"/>
+        <img src = "https://asset.bloomnation.com/c_pad,d_vendor:global:catalog:product:image.png,f_auto,fl_preserve_transparency,q_auto/v1592391865/vendor/2183/catalog/product/2/0/20200424092013_file_5ea3580d59716_5ea35828e648b.jpg"/> */}
+     </div>
     )
 }
 
@@ -142,3 +113,43 @@ export default function Home() {
     //       )
     // }
     // }
+
+
+
+
+    //Rose's code
+
+    // return (
+    //   <div className='foo'  >
+    //       <br/>
+    //    <div >
+    //    <div >
+    //    <h2 style={{textAlign: 'center', color: 'yellow' }}>
+    //    Let the Drinks Come to You.</h2>
+    //    {/* <ResponsiveEmbed aspectRatio="16by9">
+    //           <embed src={gifbeer} style={{  height: 'auto' }}  />
+    //           </ResponsiveEmbed>    */}
+    // <Carousel>
+    //   <Carousel.Item>
+    //     <img
+    //       className="d-block w-100"
+    //       src={require("../Image/img1.jpg")}
+    //       alt="First slide"  height= "500px" width="200px"/>
+    //   </Carousel.Item>
+    //   <Carousel.Item>
+    //     <img
+    //       className="d-block w-100"
+    //       src={require("../Image/img1.jpg")}
+    //       alt="second slide"  height= "500px" width="200px" length="200px"/>
+    //   </Carousel.Item>
+    //   <Carousel.Item>
+    //     <img
+    //       className="d-block w-100"
+    //       src={require("../Image/img1.jpg")}
+    //       alt="Third slide" length="200px" height= "500px" width="200px" length="200px"/>
+    //   </Carousel.Item>
+    // </Carousel>
+    //           <h4 style={{textAlign:'center', color: 'yellow' }}>Beer and Wine Delivered to your home in under 60 mintes</h4>
+    //           </div>
+    //         </div>
+    //    </div>

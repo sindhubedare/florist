@@ -82,42 +82,29 @@ postAPI = async (formData) =>{
         }
     }  
     render(){
-        return(
-            <React.Fragment>
-            <div className =" font-weight-bold">
-            <h5> Giftcards</h5>
-           </div>
-           {
-        this.state.reserve.map((item, index) => {
-            return( 
-                
-          
-            <div className="container " key={index}>
-             
-                <div className = "row">
-                  
-                                <div className="col d-flex justify-content-center">
-                               {/* <div className="card" > */}
-                               <div className="card "  width= "03rem">
-                          <img className="card-img-top" src={item.image} alt="Giftcards" />
-                           <div className="card-body ">
-                        <h5 className="card-title">{item.title}</h5>
-                         <ul>
-                        <li >Rating: {item.rating}/5</li>
-                        <li >Price: ${item.prices ? item.prices[0].value : ""}</li>
-                       </ul>
-                          <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
-                      
-                          </div>
-            </div>
-             </div>
-             </div>
-             </div>
-             
-        ) }
-        )
-            }
-       </React.Fragment>
-        )
+        let carddata =  this.state.reserve.map((item, index) => {
+            return (
+                        <div className="collections card text-dark text-left bg-dark mb-6" style={{maxWidth: "30rem", margin:"auto", marginTop: "5%"}}  key={index}>
+                            <div className="card-body">
+                            <img className="card-img-top" src={item.image} style={{ height: "40vh" }} alt="Flower Bouquet" />
+                             <p className="card-text">{item.title}</p>
+                              <p className="card-text">Rating: {item.rating}/5</p>
+                              <p className="card-text"> Price: ${item.prices ? item.prices[0].value : ""}</p>
+                              <div>
+                              <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
+                              </div>
+                              
+                        </div>
+                        </div>
+                  )
+        })
+    return (
+              <div  style={{margin:"2%"}} >
+                <h1 className= "d-flex justify-content-center font-weight-bold" id="explore-header">GIFTCARDS</h1>
+                <div className="explore row ">
+                 {carddata}
+                </div>
+              </div>
+            )
   }
 }
