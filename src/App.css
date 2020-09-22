@@ -1,6 +1,6 @@
-.App-header{
+/* .App-header{
   background-color: black;
-}
+} */
 
 *{
 background-color: #ffae00;
@@ -10,3 +10,18 @@ background-color: #ffae00;
   margin-left: 20pt;
   margin-right: 20pt;
 }
+
+.container{
+  flex-direction: row;
+
+}
+
+.card {
+  width: 200pt;
+  height: 500pt;
+}
+
+.card-title{
+  font-size: 08pt;
+}
+

@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Table} from 'react-bootstrap';
 import axios from 'axios';
-import { BrowserRouter as Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Checkout from './Checkout';
 

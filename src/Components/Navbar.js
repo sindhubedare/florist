@@ -8,6 +8,8 @@ import Giftcards from './Giftcards';
 import Chocolates from './Chocolates';
 import GreetingCard from './GreetingCard';
 import Home from './Home';
+import Checkout from './Checkout';
+import Confirmation from './Confirmation';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -78,6 +80,8 @@ export default function Navbar(){
   <Route exact path= "/GreetingCard" component= {GreetingCard} />
   <Route exact path= "/Giftcards" component= {Giftcards} />
   <Route exact path= "/Chocolates" component= {Chocolates} />
+  <Route exact path= "/Checkout" component= {Checkout}/>
+  <Route exact path= "/Confirmation" component= {Confirmation} />
   
 </Switch>
 </Router>

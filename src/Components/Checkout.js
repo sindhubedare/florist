@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Link } from "react-router-dom";
+import {Link } from "react-router-dom";
+import {Button, Table} from 'react-bootstrap';
 import Mycart from './Mycart';
 import Confirmation from './Confirmation';
 
@@ -23,7 +24,7 @@ export default class Checkout extends Component {
 
  handleChange = (event) =>{
       
-        console.log("Onchange", event.target.value)
+        // console.log("Onchange", event.target.value)
         this.setState({
           [event.target.name]:event.target.value
         });
@@ -44,10 +45,6 @@ export default class Checkout extends Component {
         }
         console.log(formData)
     }
-    
-    // try {
-    //     console.log(response.data);
-    //  }
       catch (err) {
        console.error(err.message);
      }
@@ -91,9 +88,10 @@ export default class Checkout extends Component {
                     
                     <div className="card-body">
                    <Link to = "/Confirmation">
-                    <button className="add-button text-dark">Submit</button>
+                    {/* <button className="add-button text-dark">Submit</button> */}
+                    <Button variant="dark">SUBMIT</Button>
                     </Link> 
-                                      </div>
+                     </div>
                  
                     
                     </form>

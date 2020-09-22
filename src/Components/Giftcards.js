@@ -96,13 +96,13 @@ postAPI = async (formData) =>{
              
                 <div className = "row">
                   
-                                <div className="col-md-6">
+                                <div className="col d-flex justify-content-center">
                                {/* <div className="card" > */}
                                <div className="card "  width= "03rem">
                           <img className="card-img-top" src={item.image} alt="Giftcards" />
                            <div className="card-body ">
-                        <h5 className="card-title font-weight-bold">{item.title}</h5>
-                         <ul className= "font-weight-bold">
+                        <h5 className="card-title">{item.title}</h5>
+                         <ul>
                         <li >Rating: {item.rating}/5</li>
                         <li >Price: ${item.prices ? item.prices[0].value : ""}</li>
                        </ul>
