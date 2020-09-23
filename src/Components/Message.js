@@ -52,20 +52,20 @@ export default class Message extends Component{
             }
         }  
     
-        deleteAPI = async (id) => {
-            console.log(id)
-            try{
-               const response = await axios.delete(`https://cors-anywhere.herokuapp.com/https://boiling-ocean-50857.herokuapp.com/sindhu_api/v1/form/${id}`); 
-               console.log("deleted")
-               console.log(response.data);
-               let update = this.state.reserve.filter(i => i.id !== id);
-               this.setState({reserve: update})
-            }
+        // deleteAPI = async (id) => {
+        //     console.log(id)
+        //     try{
+        //        const response = await axios.delete(`https://cors-anywhere.herokuapp.com/https://boiling-ocean-50857.herokuapp.com/sindhu_api/v1/form/${id}`); 
+        //        console.log("deleted")
+        //        console.log(response.data);
+        //        let update = this.state.reserve.filter(i => i.id !== id);
+        //        this.setState({reserve: update})
+        //     }
     
-            catch(e){
-                console.log("Error", e)
-            }
-        }
+        //     catch(e){
+        //         console.log("Error", e)
+        //     }
+        // }
 
     render() {
     return(
@@ -95,12 +95,12 @@ export default class Message extends Component{
                    </div>  
                     </div>
                     </div>
-                    
-                    <div>
+
+                    {/* <div>
                     {this.state.reserve.map((item, index) => {return(key={item.id} 
                     <Button variant="dark" style={{fontSize: "12px"}} onClick={(e)=> {this.deleteAPI(item.id)}}>Remove</Button>
                     ) } )}
-                    </div>
+                    </div> */}
     
   </React.Fragment>
     )
