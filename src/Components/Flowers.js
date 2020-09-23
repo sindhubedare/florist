@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link} from 'react-router-dom';
 
 const params = {
     api_key: "EA549444AAA74EDC8D617E400DDE4B95",
@@ -89,7 +90,9 @@ export default class Flowers extends Component {
                                         <p className="card-text">Rating: {item.rating}/5</p>
                                         <p className="card-text"> Price: ${item.prices ? item.prices[0].value : ""}</p>
                                         <div>
+                                            <Link to = "/Mycart">
                                         <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
+                                        </Link>
                                         </div>
                                         
                                   </div>
