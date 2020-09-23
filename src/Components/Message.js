@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Button, Table} from 'react-bootstrap';
 
 
-export default class Feedback extends Component{
+export default class Message extends Component{
     constructor(props) {
         super(props);
         this.state = {
-            firstName: "",
-            lastName: "",
             email: "",
-            feedback: "",
+            review: "",
             reserve:[]
         }
         
@@ -29,11 +28,8 @@ export default class Feedback extends Component{
         console.log(event)
     
         let formData = {
-
-            firstName: this.state.firstName,
-            lastName: this.state.lastName,
             email: this.state.email,
-            feedback: this.state.feedback 
+            review: this.state.review
     
         }
         console.log(formData)
@@ -46,7 +42,7 @@ export default class Feedback extends Component{
         console.log(formData)
         try{
             
-                const response = await axios.post("https://cors-anywhere.herokuapp.com/https://boiling-ocean-50857.herokuapp.com/sindhu_api/v1/employee", formData
+                const response = await axios.post("https://cors-anywhere.herokuapp.com/https://boiling-ocean-50857.herokuapp.com/sindhu_api/v1/form", formData
                 );
                 console.log(response.data)
             }
@@ -56,45 +52,54 @@ export default class Feedback extends Component{
             }
         }  
     
+        deleteAPI = async (id) => {
+            console.log(id)
+            try{
+               const response = await axios.delete(`https://cors-anywhere.herokuapp.com/https://boiling-ocean-50857.herokuapp.com/sindhu_api/v1/form/${id}`); 
+               console.log("deleted")
+               console.log(response.data);
+               let update = this.state.reserve.filter(i => i.id !== id);
+               this.setState({reserve: update})
+            }
+    
+            catch(e){
+                console.log("Error", e)
+            }
+        }
+
     render() {
     return(
         <React.Fragment>
             <div className= "feedback-form">
                <div className="form-div-review">
                  <div>
-                 <h4 id="review-heading" >FEEDBACK</h4>
+                 <h4 id="review-heading" >Personalized Message</h4>
                  </div>
             
 
                  <div>
                    <form onSubmit={this.handleSubmit} >
                     <label className="label-review text-dark">
-                    First Name </label>
-                    <input className="input-review-fname text-dark" type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} placeholder="First Name"/>
+                    Message </label>
+                    <input className="input-review-email text-dark" type="text" name="review" value={this.state.review} onChange={this.handleChange} placeholder="Your Message"/>
                     <br/><br/>
                     <label className="label-review text-dark">
-                    Last Name </label>
-                    <input className="input-review-lname text-dark" type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} placeholder="Last Name"/>
-                    <br/><br/>
-                    <label className="label-review text-dark">
-                    Email </label>
-                    <input className="input-review-email text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Email address"/>
-                    <br/><br/>
-                    <label className="label-review text-dark">
-                    Feedback </label>
-                    <input className="input-review-feedback text-dark" type="text" name="feedback" value={this.state.feedback} onChange={this.handleChange} placeholder="Feedback"/>            
+                    From </label>
+                    <input className="input-review-feedback text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="From"/>            
                     <br/><br/>
                     
                     <div className="card-body">
-                    <button className="btn btn-dark text-light">Submit</button>
-                                  
-                                      </div>
-                 
-                    
-                    </form>
-                   </div>
-                      
+                    <button className="btn btn-dark text-light">ADD YOUR MSG</button>
                     </div>
+                    </form>
+                   </div>  
+                    </div>
+                    </div>
+                    
+                    <div>
+                    {this.state.reserve.map((item, index) => {return(key={item.id} 
+                    <Button variant="dark" style={{fontSize: "12px"}} onClick={(e)=> {this.deleteAPI(item.id)}}>Remove</Button>
+                    ) } )}
                     </div>
     
   </React.Fragment>
