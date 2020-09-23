@@ -74,7 +74,7 @@ export default class Mycart extends Component {
              <div className="buttons-table">
                  </div>
              <div className="order-container">
-                 <Table className="table-list" bordered striped responsive>
+                 <Table className="table-list" bordered striped responsive style={{margin: 'auto'}}>
                      <thead  bordered hover size="sm" style={{backgroundColor: 'lightgrey'}}>
                          <tr striped bordered hover size="sm" style={{backgroundColor: 'grey'}}>
                              <th>Order</th>
@@ -112,12 +112,15 @@ export default class Mycart extends Component {
                      </tbody>
                 </Table>   
                  </div>
-                 <h3>Total amount due : $ {this.state.finaltotal}</h3>
+                 <div className= "total">
+                 <Button className = "float-right" style={{marginRight: "100px"}} variant="dark">TOTAL: $ {this.state.finaltotal}</Button>
+                 </div>
+                 <br/>
                  <div className="buttons-table" style={{marginRight: "35px"}}>
                   
-                  <Link to='/Home'> <Button variant="dark" style={{marginRight: "35px"}}>Continue Shopping</Button> </Link>
+                  <Link to='/Home'> <Button  variant="dark" style={{marginRight: "35px"}}>Continue Shopping</Button> </Link>
                   <Link to='/Checkout' value={this.state.reserve}> <Button variant="dark">Checkout</Button> </Link> 
-                   
+                   <br/> <br/>
                  </div>
                  
              </div> 

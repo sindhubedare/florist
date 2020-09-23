@@ -24,7 +24,7 @@ export default class Message extends Component{
         });
     }
     handleSubmit = (event)=>{
-        alert("Feedback sent to us... Thank you!");
+        // alert("Feedback sent to us... Thank you!");
         event.preventDefault();
         console.log(event)
     
@@ -78,7 +78,7 @@ export default class Message extends Component{
                     <div className="card-body">
                     <Link to = "/Confirmation">
                     {/* <button className="add-button text-dark">Submit</button> */}
-                    <Button variant="dark">SUBMIT</Button>
+                    <Button variant="dark">SUBMIT ORDER</Button>
                     </Link> 
                     </div>
                     </form>

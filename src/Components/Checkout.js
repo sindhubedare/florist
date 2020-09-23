@@ -59,7 +59,7 @@ export default class Checkout extends Component {
                  </div>
                  <div>
                    <Link to = "/Mycart">
-                 <h3>Total amount due : $ {this.state.finaltotal}</h3>
+                   <Button variant="dark">TOTAL: $ {this.state.finaltotal}</Button>
                  </Link>
                  </div>
 
