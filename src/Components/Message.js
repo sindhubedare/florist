@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {Link } from "react-router-dom";
 import {Button, Table} from 'react-bootstrap';
 
 
@@ -75,7 +76,10 @@ export default class Message extends Component{
                     <br/><br/>
                     
                     <div className="card-body">
-                    <button className="btn btn-dark text-light">ADD YOUR MSG</button>
+                    <Link to = "/Confirmation">
+                    {/* <button className="add-button text-dark">Submit</button> */}
+                    <Button variant="dark">SUBMIT</Button>
+                    </Link> 
                     </div>
                     </form>
                    </div>  

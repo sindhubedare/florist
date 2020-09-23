@@ -11,6 +11,7 @@ import Home from './Home';
 import Checkout from './Checkout';
 import Confirmation from './Confirmation';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import Message from './Message';
 
 
 
@@ -82,7 +83,7 @@ export default function Navbar(){
   <Route exact path= "/Chocolates" component= {Chocolates} />
   <Route exact path= "/Checkout" component= {Checkout}/>
   <Route exact path= "/Confirmation" component= {Confirmation} />
-  
+  <Route exact path= "/Message" component= {Message}/>
 </Switch>
 </Router>
 </div>

@@ -4,6 +4,7 @@ import {Link } from "react-router-dom";
 import {Button} from 'react-bootstrap';
 
 
+
 //nameoncard, ccnumbr, expiremonthandyr and cvv and submit button
 export default class Checkout extends Component {
     constructor(props) {
@@ -85,10 +86,13 @@ export default class Checkout extends Component {
                     <br/><br/>
                     
                     <div className="card-body">
-                   <Link to = "/Confirmation">
+                    <Link to = "/Message">
                     {/* <button className="add-button text-dark">Submit</button> */}
-                    <Button variant="dark">SUBMIT</Button>
-                    </Link> 
+                    <Button variant="dark">ADD PERSONALIZED MESSAGE / CONTINUE</Button>
+                    </Link>
+                    <br/>
+                 
+                    
                      </div>
                  
                     
