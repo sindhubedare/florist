@@ -74,6 +74,7 @@ export default function Navbar(){
 </nav>
 
 <Switch>
+  <Route exact path= "/" component={Home} />
   <Route exact path= "/Home" component={Home} />
   <Route exact path= "/Flowers" component={Flowers} />
   <Route exact path= "/Mycart" component= {Mycart} />

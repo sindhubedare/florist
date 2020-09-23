@@ -93,9 +93,9 @@ postAPI = async (formData) =>{
                               <p className="card-text">Rating: {item.rating}/5</p>
                               <p className="card-text"> Price: ${item.prices ? item.prices[0].value : ""}</p>
                               <div>
-                              <Link to = "/Mycart">
+                            
                                         <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> this.onSubmit(e, item.image, item.title, item.prices, item.asin)}>Add</button>
-                                        </Link>
+                                
                               </div>
                               
                         </div>
