@@ -93,21 +93,21 @@ postAPI = async (formData) =>{
                               <p className="card-text"> Price: ${item.prices ? item.prices[0].value : ""}</p>
                               <div>
                               <Link to = "/Mycart">
-                                        <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
-                                        </Link>
+                            <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
+                            </Link>
                               </div>
                               
                         </div>
                         </div>
                   )
         })
-    return (
-              <div  style={{margin:"2%"}} >
-                <h1 className= "d-flex justify-content-center font-weight-bold" id="explore-header">GOURMET-CHOCOLATES</h1>
-                <div className="explore row ">
-                 {carddata}
-                </div>
-              </div>
-            )
-  }
+             return (
+                <div  style={{margin:"2%"}} >
+                 <h1 className= "d-flex justify-content-center font-weight-bold" id="explore-header">GOURMET-CHOCOLATES</h1>
+                    <div className="explore row ">
+                     {carddata}
+                    </div>
+                 </div>
+                  )
+     }
 }

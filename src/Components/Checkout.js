@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link } from "react-router-dom";
 import {Button} from 'react-bootstrap';
+import Mycart from './Mycart';
 
 
 
@@ -56,7 +57,11 @@ export default class Checkout extends Component {
                  <div>
                  <h4 id="review-heading" >Card Info</h4>
                  </div>
-            
+                 <div>
+                   <Link to = "/Mycart">
+                 <h3>Total amount due : $ {this.state.finaltotal}</h3>
+                 </Link>
+                 </div>
 
                  <div>
                    <form onSubmit={this.handleSubmit} >

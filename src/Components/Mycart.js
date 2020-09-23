@@ -104,7 +104,9 @@ export default class Mycart extends Component {
                                       ${item.total}
                                  </td>
                                  <td className= "text-dark">
+                                     <Link to= "/Mycart">
                                       <Button variant="dark" style={{fontSize: "12px"}} onClick={(e)=> {this.deleteAPI(item.id)}}>Remove</Button> 
+                                      </Link>
                                  </td>
                              </tr>)})}
                      </tbody>
