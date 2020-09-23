@@ -68,25 +68,25 @@ export default class Feedback extends Component{
 
                  <div>
                    <form onSubmit={this.handleSubmit} >
-                    <label className="label-review text-dark">
+                    <label className="label-review text-dark font-weight-bold">
                     First Name </label>
                     <input className="input-review-fname text-dark" type="text" name="firstName" value={this.state.firstName} onChange={this.handleChange} placeholder="First Name"/>
                     <br/><br/>
-                    <label className="label-review text-dark">
+                    <label className="label-review text-dark font-weight-bold">
                     Last Name </label>
                     <input className="input-review-lname text-dark" type="text" name="lastName" value={this.state.lastName} onChange={this.handleChange} placeholder="Last Name"/>
                     <br/><br/>
-                    <label className="label-review text-dark">
+                    <label className="label-review text-dark font-weight-bold">
                     Email </label>
                     <input className="input-review-email text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="Email address"/>
                     <br/><br/>
-                    <label className="label-review text-dark">
+                    <label className="label-review text-dark font-weight-bold">
                     Feedback </label>
                     <input className="input-review-feedback text-dark" type="text" name="feedback" value={this.state.feedback} onChange={this.handleChange} placeholder="Feedback"/>            
                     <br/><br/>
                     
                     <div className="card-body">
-                    <button className="btn btn-dark text-light">Submit</button>
+                    <button className="btn btn-dark text-light ">Submit</button>
                                   
                                       </div>
                  

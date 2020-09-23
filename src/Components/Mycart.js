@@ -79,6 +79,7 @@ export default class Mycart extends Component {
              
              <div className="my-cart-main-container float-center" style={{marginLeft:"1%", marginRight:"1%", marginTop: "5%"}}>
              <h3 className= "d-flex justify-content-center font-weight-bold">Order Summary</h3>
+             <br/>
              <div className="buttons-table">
                  </div>
              <div className="order-container">
@@ -121,12 +122,12 @@ export default class Mycart extends Component {
                 </Table>   
                  </div>
                  <div className= "total" responsive>
-                 <Button className = "float-right" style={{marginRight: "150px"}} variant="outline-dark">TOTAL: $ {this.state.finaltotal}</Button>
+                 <Button className = "float-right font-weight-bold" style={{marginRight: "2%"}} variant="outline-dark">TOTAL: $ {this.state.finaltotal}</Button>
                  </div>
                  <br/>
-                 <div className="buttons-table" style={{marginRight: "35px"}}>
+                 <div className="buttons-table " >
                   
-                  <Link to='/Home'> <Button  variant="dark" style={{marginRight: "35px"}}>Continue Shopping</Button> </Link>
+                  <Link to='/Home'> <Button variant="dark" >Continue Shopping</Button> </Link>
                   <Link to='/Checkout' value={this.state.reserve}> <Button variant="dark">Checkout</Button> </Link> 
                    <br/> <br/>
                  </div>
