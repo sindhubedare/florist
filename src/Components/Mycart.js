@@ -120,8 +120,8 @@ export default class Mycart extends Component {
                      </tbody>
                 </Table>   
                  </div>
-                 <div className= "total">
-                 <Button className = "float-right" style={{marginRight: "200px"}} variant="dark">TOTAL: $ {this.state.finaltotal}</Button>
+                 <div className= "total" responsive>
+                 <Button className = "float-right" style={{marginRight: "150px"}} variant="outline-dark">TOTAL: $ {this.state.finaltotal}</Button>
                  </div>
                  <br/>
                  <div className="buttons-table" style={{marginRight: "35px"}}>
