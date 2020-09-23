@@ -48,21 +48,6 @@ export default class Mycart extends Component {
 
             this.setState({reserve: response.data});
                this.totalPay(response)
-                            //             let temp=[];
-                            // let finalPrice=[];
-                            // for(let i=0; i<response.data.length;i++){
-                            // {temp[i]= response.data[i].total;}
-                            // finalPrice.push(temp[i])
-                            // console.log(finalPrice)
-            
-                            // }
-                            // console.log(
-                            //     finalPrice.reduce((a, b) => a + b, 0)
-                            //   )
-            
-                            //   let totalPay = ( finalPrice.reduce((a, b) => a + b, 0)).toFixed(2);
-                            //    this.setState({finaltotal:totalPay})
-                            //    sessionStorage.setItem("finalTotal" , totalPay)
         }
 
         catch(e){
