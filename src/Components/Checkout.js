@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link } from "react-router-dom";
-import {Button, Table} from 'react-bootstrap';
-import Mycart from './Mycart';
-import Confirmation from './Confirmation';
+import {Button} from 'react-bootstrap';
 
 
 //nameoncard, ccnumbr, expiremonthandyr and cvv and submit button

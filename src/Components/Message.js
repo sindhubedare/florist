@@ -52,21 +52,7 @@ export default class Message extends Component{
             }
         }  
     
-        // deleteAPI = async (id) => {
-        //     console.log(id)
-        //     try{
-        //        const response = await axios.delete(`https://cors-anywhere.herokuapp.com/https://boiling-ocean-50857.herokuapp.com/sindhu_api/v1/form/${id}`); 
-        //        console.log("deleted")
-        //        console.log(response.data);
-        //        let update = this.state.reserve.filter(i => i.id !== id);
-        //        this.setState({reserve: update})
-        //     }
-    
-        //     catch(e){
-        //         console.log("Error", e)
-        //     }
-        // }
-
+       
     render() {
     return(
         <React.Fragment>
@@ -79,11 +65,11 @@ export default class Message extends Component{
 
                  <div>
                    <form onSubmit={this.handleSubmit} >
-                    <label className="label-review text-dark">
+                    <label className="label text-dark">
                     Message </label>
                     <input className="input-review-email text-dark" type="text" name="review" value={this.state.review} onChange={this.handleChange} placeholder="Your Message"/>
                     <br/><br/>
-                    <label className="label-review text-dark">
+                    <label className="label text-dark">
                     From </label>
                     <input className="input-review-feedback text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="From"/>            
                     <br/><br/>
