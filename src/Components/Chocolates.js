@@ -75,7 +75,7 @@ postAPI = async (formData) =>{
             const response = await axios.post("https://cors-anywhere.herokuapp.com/https://boiling-ocean-50857.herokuapp.com/sindhu_api/v1/orders", formData
             );
             console.log(response.data)
-            // this.props.history.push('/mycart');
+            this.props.history.push('/mycart');
         }
 
     catch(e){
@@ -85,21 +85,21 @@ postAPI = async (formData) =>{
     render(){
         let carddata =  this.state.reserve.map((item, index) => {
             return (
-                        <div className="collections card text-dark text-left bg-dark mb-6" style={{maxWidth: "30rem", margin:"auto", marginTop: "5%"}}  key={index}>
-                            <div className="card-body">
-                            <img className="card-img-top" src={item.image} style={{ height: "40vh" }} alt="Flower Bouquet" />
-                             <p className="card-text">{item.title}</p>
-                              <p className="card-text">Rating: {item.rating}/5</p>
-                              <p className="card-text"> Price: ${item.prices ? item.prices[0].value : ""}</p>
-                              <div>
-                              <Link to = "/Mycart">
-                            <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> {this.onSubmit(e, item.image, item.title, item.prices, item.asin)}}>Add</button>
+                <div className="collections card text-dark text-left bg-dark mb-6" style={{maxWidth: "30rem", margin:"auto", marginTop: "5%"}}  key={index}>
+                    <div className="card-body">
+                    <img className="card-img-top" src={item.image} style={{ height: "40vh" }} alt="Chocolates" />
+                     <p className="card-text">{item.title}</p>
+                      <p className="card-text">Rating: {item.rating}/5</p>
+                      <p className="card-text"> Price: ${item.prices ? item.prices[0].value : ""}</p>
+                      <div>
+                      <Link to = "/Mycart">
+                            <button className="add-button .bg-dark Primary link font-weight-bold" onClick={(e)=> this.onSubmit(e, item.image, item.title, item.prices, item.asin)}>Add</button>
                             </Link>
-                              </div>
-                              
-                        </div>
-                        </div>
-                  )
+                      </div>
+                      
+                </div>
+                </div>
+          )
         })
              return (
                 <div  style={{margin:"2%"}} >

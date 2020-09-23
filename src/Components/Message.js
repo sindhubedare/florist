@@ -60,17 +60,17 @@ export default class Message extends Component{
             <div className= "feedback-form">
                <div className="form-div-review">
                  <div style={{marginTop: '100px' }}>
-                 <h4 id="review-heading" >OPTIONAL PERSONALIZED MESSAGE</h4>
+                 <h4 className= "font-weight-bold" id="review-heading" >OPTIONAL PERSONALIZED MESSAGE</h4>
                  </div>
             
 
                  <div>
                    <form onSubmit={this.handleSubmit} >
-                    <label className="label text-dark">
+                    <label className="label text-dark font-weight-bold">
                     Message </label>
                     <input className="input-review-email text-dark" type="text" name="review" value={this.state.review} onChange={this.handleChange} placeholder="Type Your Message Here"/>
                     <br/><br/>
-                    <label className="label text-dark">
+                    <label className="label text-dark font-weight-bold">
                     From </label>
                     <input className="input-review-feedback text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="-From"/>            
                     <br/><br/>
