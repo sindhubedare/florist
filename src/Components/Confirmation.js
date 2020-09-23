@@ -4,11 +4,11 @@ import {Link} from 'react-router-dom';
 
 export default function Confirmation() {
     return (
-        <div>
-           <h4 style={{textAlign: 'center', color: 'black' , marginTop: '100px' }}>Thank you, Order placed successfully! <br/> <br/> Look forward for confirmation email from us <br/>
+        <div style={{textAlign: 'center', color: 'black' , marginTop: '100px' }}>
+           <h4 >Thank you, Order placed successfully! <br/>Look forward for confirmation email from us <br/> <br/>
            Confirmation Number: FGCGC960400009</h4>
            <br/>
-           <Link to='/Home'> <Button className= "float-center" variant="dark">Continue Shopping</Button> </Link>
+           <Link to='/Home'> <Button variant="dark">Continue Shopping</Button> </Link>
         </div>
         
        

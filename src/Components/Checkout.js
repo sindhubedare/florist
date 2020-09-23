@@ -17,7 +17,8 @@ export default class Checkout extends Component {
             expiryDate: "",
             cvv: "",
             address: "",
-            reserve:[]
+            reserve:[],
+            finaltotal: sessionStorage.getItem("finalTotal")
         }
         
     }

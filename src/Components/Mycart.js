@@ -18,6 +18,26 @@ export default class Mycart extends Component {
 
         }
     }
+   
+    totalPay = (response = false) =>{
+        if(!response) response= this.state.reserve
+        else response= response.data
+        let temp=[];
+        let finalPrice=[];
+        for(let i=0; i<response.length;i++){
+        {temp[i]= response[i].total;}
+        finalPrice.push(temp[i])
+        console.log(finalPrice)
+
+        }
+        console.log(
+            finalPrice.reduce((a, b) => a + b, 0)
+          )
+
+          let totalPay = ( finalPrice.reduce((a, b) => a + b, 0)).toFixed(2);
+           this.setState({finaltotal:totalPay})
+           sessionStorage.setItem("finalTotal" , totalPay)
+    }
 
     async componentDidMount() {
         try {
@@ -27,20 +47,22 @@ export default class Mycart extends Component {
             console.log(response.data[0].total)
 
             this.setState({reserve: response.data});
-                                        let temp=[];
-                            let finalPrice=[];
-                            for(let i=0; i<response.data.length;i++){
-                            {temp[i]= response.data[i].total;}
-                            finalPrice.push(temp[i])
-                            console.log(finalPrice)
+               this.totalPay(response)
+                            //             let temp=[];
+                            // let finalPrice=[];
+                            // for(let i=0; i<response.data.length;i++){
+                            // {temp[i]= response.data[i].total;}
+                            // finalPrice.push(temp[i])
+                            // console.log(finalPrice)
             
-                            }
-                            console.log(
-                                finalPrice.reduce((a, b) => a + b, 0)
-                              )
+                            // }
+                            // console.log(
+                            //     finalPrice.reduce((a, b) => a + b, 0)
+                            //   )
             
-                              let totalPay = ( finalPrice.reduce((a, b) => a + b, 0)).toFixed(2);
-                               this.setState({finaltotal:totalPay})
+                            //   let totalPay = ( finalPrice.reduce((a, b) => a + b, 0)).toFixed(2);
+                            //    this.setState({finaltotal:totalPay})
+                            //    sessionStorage.setItem("finalTotal" , totalPay)
         }
 
         catch(e){
@@ -56,6 +78,7 @@ export default class Mycart extends Component {
            console.log(response.data);
            let update = this.state.reserve.filter(i => i.id !== id);
            this.setState({reserve: update})
+           this.totalPay()
         }
 
         catch(e){
@@ -104,9 +127,9 @@ export default class Mycart extends Component {
                                       ${item.total}
                                  </td>
                                  <td className= "text-dark">
-                                     <Link to= "/Mycart">
+                                  
                                       <Button variant="dark" style={{fontSize: "12px"}} onClick={(e)=> {this.deleteAPI(item.id)}}>Remove</Button> 
-                                      </Link>
+                                     
                                  </td>
                              </tr>)})}
                      </tbody>

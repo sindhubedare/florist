@@ -59,8 +59,8 @@ export default class Message extends Component{
         <React.Fragment>
             <div className= "feedback-form">
                <div className="form-div-review">
-                 <div>
-                 <h4 id="review-heading" >Personalized Message</h4>
+                 <div style={{marginTop: '100px' }}>
+                 <h4 id="review-heading" >OPTIONAL PERSONALIZED MESSAGE</h4>
                  </div>
             
 
@@ -68,11 +68,11 @@ export default class Message extends Component{
                    <form onSubmit={this.handleSubmit} >
                     <label className="label text-dark">
                     Message </label>
-                    <input className="input-review-email text-dark" type="text" name="review" value={this.state.review} onChange={this.handleChange} placeholder="Your Message"/>
+                    <input className="input-review-email text-dark" type="text" name="review" value={this.state.review} onChange={this.handleChange} placeholder="Type Your Message Here"/>
                     <br/><br/>
                     <label className="label text-dark">
                     From </label>
-                    <input className="input-review-feedback text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="From"/>            
+                    <input className="input-review-feedback text-dark" type="text" name="email" value={this.state.email} onChange={this.handleChange} placeholder="-From"/>            
                     <br/><br/>
                     
                     <div className="card-body">
