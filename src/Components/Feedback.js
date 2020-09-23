@@ -59,7 +59,7 @@ export default class Feedback extends Component{
     render() {
     return(
         <React.Fragment>
-            <div className= "feedback-form">
+            <div className= "feedback-form" style={{maxWidth: "30rem", margin:"auto", marginTop: "5%"}} responsive>
                <div className="form-div-review">
                  <div>
                  <h4 id="review-heading" >FEEDBACK</h4>

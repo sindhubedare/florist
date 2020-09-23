@@ -17,7 +17,7 @@ import Message from './Message';
 
 export default function Navbar(){
     return(
-        <div className="nav-color">
+        <div className="nav-color" responsive>
         <Router>
         <nav className="navbar navbar-expand-lg navbar-light bg-dark " >
   <a className="navbar-brand text-warning text-uppercase font-weight-bold"  href="#">The Florist</a>

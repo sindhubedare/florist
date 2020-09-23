@@ -92,14 +92,14 @@ export default class Mycart extends Component {
         return(
          <React.Fragment>
              
-             <div className="my-cart-main-container">
-             <h3 className="view-order-header">Order Summary</h3>
+             <div className="my-cart-main-container float-center" style={{marginLeft:"1%", marginRight:"1%", marginTop: "5%"}}>
+             <h3 className= "d-flex justify-content-center font-weight-bold">Order Summary</h3>
              <div className="buttons-table">
                  </div>
              <div className="order-container">
-                 <Table className="table-list" bordered striped responsive style={{margin: 'auto'}}>
+                 <Table className="table-list" bordered responsive style={{margin: 'auto'}}>
                      <thead  bordered hover size="sm" style={{backgroundColor: 'lightgrey'}}>
-                         <tr striped bordered hover size="sm" style={{backgroundColor: 'grey'}}>
+                         <tr bordered hover size="sm" style={{backgroundColor: 'grey'}}>
                              <th>Order</th>
                              <th>Order Title</th>
                              <th>Qty</th>
@@ -136,7 +136,7 @@ export default class Mycart extends Component {
                 </Table>   
                  </div>
                  <div className= "total">
-                 <Button className = "float-right" style={{marginRight: "100px"}} variant="dark">TOTAL: $ {this.state.finaltotal}</Button>
+                 <Button className = "float-right" style={{marginRight: "200px"}} variant="dark">TOTAL: $ {this.state.finaltotal}</Button>
                  </div>
                  <br/>
                  <div className="buttons-table" style={{marginRight: "35px"}}>
