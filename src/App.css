@@ -40,7 +40,7 @@ background-color: #ffae00;
   height: 100vh;
   width: 100%;
   margin: 0;
-  animation: myFrames2 20s step-end 0s infinite;
+  animation: myFrames2 50s step-end 0s infinite;
   letter-spacing: 10px;
   font-size: xx-large;
   text-shadow: 3px 3px black;

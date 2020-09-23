@@ -17,60 +17,59 @@ import Message from './Message';
 
 export default function Navbar(){
     return(
-        <div className="nav-color" responsive>
+     <div className="nav-color">
         <Router>
-        <nav className="navbar navbar-expand-lg navbar-light bg-dark " >
-  <a className="navbar-brand text-warning text-uppercase font-weight-bold"  href="#">The Florist</a>
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span className="navbar-toggler-icon"></span>
-  </button>
+        <nav className="navbar navbar-expand-lg navbar-dark bg-dark " >
+         <a className="navbar-brand text-warning text-uppercase font-weight-bold"  href="#">The Florist</a>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+         <span className="navbar-toggler-icon"></span>
+         </button>
 
-  <div className="collapse navbar-collapse bg-dark" id="navbarSupportedContent">
-    <ul className="navbar-nav m-auto ">
-      <li className="nav-item text-white text-uppercase bg-dark">
-        <Link to ="/Home">
-        <a className="nav-link text-white text-uppercase" href="#">Home </a>
-        </Link>
-      </li>
-      {/* <span className="sr-only">(current)</span> */}
-    
-      <li className="nav-item text-white text-uppercase bg-dark">
+    <div className="collapse navbar-collapse bg-dark" id="navbarSupportedContent">
+        <ul className="navbar-nav mr-auto ">
+         <li className="nav-item text-white text-uppercase bg-dark">
+         <Link to ="/Home">
+         <a className="nav-link text-white text-uppercase" href="#">Home </a>
+         </Link>
+        </li>
+        <li className="nav-item text-white text-uppercase bg-dark">
         <Link to = "/Flowers">
         <a className="nav-link  text-white text-uppercase " href="#">Flowers</a>
         </Link>
-      </li>
-      <li className="nav-item text-white text-uppercase bg-dark">
+        </li>
+        <li className="nav-item text-white text-uppercase bg-dark">
         <Link to = "/Giftcards">
         <a className="nav-link  text-white text-uppercase " href="#">Giftcards</a>
         </Link>
-      </li>
-      <li className="nav-item text-white text-uppercase bg-dark">
+        </li>
+        <li className="nav-item text-white text-uppercase bg-dark">
         <Link to = "/Chocolates">
         <a className="nav-link  text-white text-uppercase " href="#">Chocolates</a>
         </Link>
-      </li>
+        </li>
 
-       <li className="nav-item text-white text-uppercase bg-dark">
+        <li className="nav-item text-white text-uppercase bg-dark">
          <Link to = "/GreetingCard">
         <a className="nav-link text-white text-uppercase " href="#">Greeting Cards</a>
         </Link>
-      </li>
-      <li className="nav-item text-white text-uppercase bg-dark">
+        </li>
+       <li className="nav-item text-white text-uppercase bg-dark">
         <Link to = "/Feedback">
         <a className="nav-link  text-white text-uppercase " href="#">Feedback</a>
         </Link>
-      </li>
-    </ul>
-    <form className="form-inline my-2 my-lg-0 bg-dark">
-      {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" /> */}
-      <Link to ="/Mycart">
-      <button className="btn btn-outline-primary my-2 my-sm-0 text-white text-uppercase" type="submit">Cart</button>
-      </Link>
-    </form>
-    <div className= "bg-dark">
-      <MdAddShoppingCart className= "bg-dark" color= 'white' size= '3rem' />
+       </li>
+       </ul>
+        
+        <form className="form-inline my-2 my-lg-0 bg-dark">
+        {/* <input className="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" /> */}
+         <Link to ="/Mycart">
+          <button className="btn btn-outline-primary my-2 my-sm-0 text-white text-uppercase" type="submit">Cart</button>
+        </Link>
+       </form>
+        <div className= "bg-dark">
+        <MdAddShoppingCart className= "bg-dark" color= 'white' size= '3rem' />
+        </div>
       </div>
-  </div>
 </nav>
 
 <Switch>
@@ -90,3 +89,5 @@ export default function Navbar(){
 </div>
     );
   }
+
+
