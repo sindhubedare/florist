@@ -28,37 +28,26 @@ export default function Navbar(){
   <div className="collapse navbar-collapse bg-dark" id="navbarSupportedContent">
       <ul className="navbar-nav mr-auto ">
        <li className="nav-item text-white text-uppercase bg-dark">
-       <Link to ="/Home">
-       <a className="nav-link text-white text-uppercase" href="#">Home </a>
-       </Link>
+       <a className="nav-link text-white text-uppercase" href="/Home">Home </a>
       </li>
 
       <li className="nav-item text-white text-uppercase bg-dark">
-      <Link to = "/Flowers">
-      <a className="nav-link  text-white text-uppercase " href="#">Flowers</a>
-      </Link>
+      <a className="nav-link  text-white text-uppercase " href="/Flowers">Flowers</a>
       </li>
       
       <li className="nav-item text-white text-uppercase bg-dark">
-      <Link to = "/Giftcards">
-      <a className="nav-link  text-white text-uppercase " href="#">Giftcards</a>
-      </Link>
+      <a className="nav-link  text-white text-uppercase " href="/Giftcards">Giftcards</a>
       </li>
       <li className="nav-item text-white text-uppercase bg-dark">
-      <Link to = "/Chocolates">
-      <a className="nav-link  text-white text-uppercase " href="#">Chocolates</a>
-      </Link>
+      <a className="nav-link  text-white text-uppercase " href="/Chocolates">Chocolates</a>
       </li>
 
       <li className="nav-item text-white text-uppercase bg-dark">
-       <Link to = "/GreetingCard">
-      <a className="nav-link text-white text-uppercase " href="#">Greeting Cards</a>
-      </Link>
+      <a className="nav-link text-white text-uppercase " href="/GreetingCard">Greeting Cards</a>
       </li>
+
      <li className="nav-item text-white text-uppercase bg-dark">
-      <Link to = "/Feedback">
-      <a className="nav-link  text-white text-uppercase " href="#">Feedback</a>
-      </Link>
+      <a className="nav-link  text-white text-uppercase " href="/Feedback">Feedback</a>
      </li>
      </ul>
       

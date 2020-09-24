@@ -1,14 +1,16 @@
 import React from 'react';
 import './App.css';
 import Navbar from './Components/Navbar';
-// import NewNavbar from './Components/NewNavbar';
+// import Newnav from './Components/Newnav';
+// import Nav from './Components/Nav';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
         <Navbar />
-      {/* <NewNavbar /> */}
+      {/* <Newnav /> */}
+      {/* <Nav/> */}
       </header>
 
       
