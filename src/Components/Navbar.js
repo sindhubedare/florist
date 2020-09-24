@@ -19,7 +19,7 @@ export default function Navbar(){
     return(
      <div className="nav-color">
         <Router>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark " >
+        <nav className="navbar navbar-expand-lg navbar-light bg-dark " >
          <a className="navbar-brand text-warning text-uppercase font-weight-bold"  href="#">The Florist</a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
          <span className="navbar-toggler-icon"></span>
@@ -68,7 +68,7 @@ export default function Navbar(){
        </form>
         <div className= "bg-dark">
         <MdAddShoppingCart className= "bg-dark" color= 'white' size= '3rem' />
-        </div>
+      </div>
       </div>
 </nav>
 

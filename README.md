@@ -18,8 +18,8 @@ Deployed to Heroku - https://dashboard.heroku.com/apps/boiling-ocean-50857
 
 ### BACKEND- GH Repository
 
-https://github.com/sindhubedare/capstone
-https://github.com/sindhubedare/capstone.git
+https://github.com/sindhubedare/CS-backup
+https://github.com/sindhubedare/CS-backup.git
 
 
 
