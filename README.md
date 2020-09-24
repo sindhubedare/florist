@@ -2,7 +2,7 @@
 
 ## Target User
 
-Someone looking to order online delivery fresh Flowers, Giftcards, Greeting-cards and Gourmet Chocolates along with personalized message.
+Someone looking to order online delivery of fresh Flowers, Giftcards, Greeting-cards and Gourmet Chocolates along with personalized message.
 
 ## The netlify deployed final link
 
@@ -25,10 +25,15 @@ https://github.com/sindhubedare/CS-backup.git
 ### Technologies used
 
 SpringBoot- Maven
+
 PostgreSQL
+
 Eclipse-IDE
+
 React-JS
+
 Heroku
+
 Github
 
 
