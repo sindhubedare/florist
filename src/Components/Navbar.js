@@ -19,9 +19,9 @@ export default function Navbar(){
   return(
    <div className="nav-color">
       <Router>
-      <nav className="navbar navbar-expand-lg navbar-light bg-dark " >
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark " >
        <a className="navbar-brand text-warning text-uppercase font-weight-bold"  href="#">The Florist</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span className="navbar-toggler-icon"></span>
        </button>
 
