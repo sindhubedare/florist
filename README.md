@@ -22,4 +22,16 @@ https://github.com/sindhubedare/CS-backup
 https://github.com/sindhubedare/CS-backup.git
 
 
+### Technologies used
+
+SpringBoot- Maven
+PostgreSQL
+Eclipse-IDE
+React-JS
+Heroku
+Github
+
+
+
+
 
