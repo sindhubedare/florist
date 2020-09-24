@@ -1,7 +1,7 @@
 
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import {Navbar, Nav, NavDropdown } from 'react-bootstrap'
+import {Navbar, Nav} from 'react-bootstrap'
 import {Link, HashRouter as Router} from 'react-router-dom'
 // import '../styles/_Navigation.scss'
 import Mycart from './Mycart';
@@ -16,39 +16,37 @@ import Confirmation from './Confirmation';
 import Message from './Message';
 import {Switch, Route } from "react-router-dom";
 import { MdAddShoppingCart } from "react-icons/md";
+import '../App.css';
 
 
 export default function Newnav() {
+
    return (
 
        <Router>
 
        <div className="route-container">
           
-           <Navbar className="nav-color" bg="dark" expand="lg" variant="dark">
+           <Navbar className="nav-color" style={{position: "relative", zIndex: "1"}} bg="dark" expand="sm" variant="dark">
                
                <Navbar.Brand as={Link} to='/'>
                    <h1 className= "text-uppercase text-warning font-weight-bold bg-dark" id="store-name">THE FLORIST</h1>
                </Navbar.Brand>                
                <Navbar.Toggle aria-controls="basic-navbar-nav" />
                <Navbar.Collapse id="basic-navbar-nav" className="nav-link text-white text-uppercase bg-dark">
-               <Nav className="mr-auto" id="nav">
-                   <ul>
-                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#">Home</Nav.Link>
-                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#">Flowers</Nav.Link>
-                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#">Giftcards</Nav.Link>
-                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#">Chocolates</Nav.Link>
-                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#">Greeting-Cards</Nav.Link>
-                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#">Feedback</Nav.Link>
-                   <form className="form-inline my-2 my-lg-0 bg-dark">
-                   <Nav.Link className="outline-primary my-2 my-sm-0 text-white text-uppercase" href= "#">Cart</Nav.Link>
-                   </form>
-                   <div className= "bg-dark">
-                    <MdAddShoppingCart className= "bg-dark" color= 'white' size= '3rem' />
-                     </div>
+               <Nav className="mr-auto nav-fix" id="nav">
+                   
+                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#Home">Home</Nav.Link>
+                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#Flowers">Flowers</Nav.Link>
+                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#Giftcards">Giftcards</Nav.Link>
+                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#Chocolates">Chocolates</Nav.Link>
+                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#GreetingCard">Greeting-Cards</Nav.Link>
+                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#Feedback">Feedback</Nav.Link>
+                   <Nav.Link className="nav-link text-white text-uppercase bg-dark" href= "#Mycart">Cart</Nav.Link>
 
-                     </ul>
+                   
                  </Nav> 
+                 
                  </Navbar.Collapse>
            
            </Navbar> 

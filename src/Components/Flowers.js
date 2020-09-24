@@ -82,7 +82,7 @@ export default class Flowers extends Component {
               
                let carddata =  this.state.reserve.map((item, index) => {
                       return (
-                                  <div className="collections card text-dark text-left bg-dark mb-6" style={{maxWidth: "30rem", margin:"auto", marginTop: "5%"}}  key={index}>
+                                  <div className="collections card text-dark text-left bg-dark mb-6" style={{maxWidth: "30rem", margin:"auto", marginTop: "5%", position: "relative", zIndex: "0"}}  key={index}>
                                       <div className="card-body">
                                       <img className="card-img-top" src={item.image} style={{ height: "40vh" }} alt="Flower Bouquet" />
                                        <p className="card-text">{item.title}</p>
