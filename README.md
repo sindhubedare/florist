@@ -6,7 +6,7 @@ Someone looking to order online delivery of fresh Flowers, Giftcards, Greeting-c
 
 ## The netlify deployed final link
 
-https://sleepy-nobel-b1a2b1.netlify.app/#/
+https://thirsty-liskov-674bcc.netlify.app
 
 ### API used
 
